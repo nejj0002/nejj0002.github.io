@@ -1,35 +1,38 @@
-{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Base styles for the whole page */
 body {
-  font-family: "Roboto", sans-serif;
-  line-height: 1.6;  
-  color: brown;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+  color: #222;
+  width: 1200px;
+  max-width: 100%;
+  margin: auto;
+  background-color: #ffffff;
 }
 
+/* Image styling */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
+/* Link styles */
 a {
   text-decoration: none;
   color: #c78c06;
 }
 
+/* Remove list bullets */
 ul {
   list-style: none;
 }
 
-/* Header Styles */
+/* Header section */
 header {
   background-color: #222;
 }
 
+/* Logo styling */
 .logo {
   background-color: #c78c06;
   padding: 15px;
@@ -40,6 +43,7 @@ header {
   max-width: 40px;
 }
 
+/* Navigation bar */
 nav {
   background-color: #222;
   padding: 10px 0;
@@ -52,7 +56,7 @@ nav ul {
   text-align: center;
   justify-content: center;
   width: auto;
-padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 nav ul li a {
@@ -60,12 +64,15 @@ nav ul li a {
   font-size: 0.9rem;
   display: block;
 }
+
 nav ul li a:hover {
   color: #222;
-  background-color: #c78c06
-
+  background-color: #c78c06;
+  padding: 4px;
+  width: 100%;
 }
 
+/* Search form inside nav */
 nav form {
   display: flex;
   justify-content: center;
@@ -79,6 +86,7 @@ nav form label {
 nav form input {
   padding: 5px;
   margin: auto;
+  border-radius: 4px 0 0 4px;
   border: none;
   width: 100%;
 }
@@ -88,10 +96,11 @@ nav form button {
   color: #c78c06;
   border: 1px solid #c78c06;
   padding: 5px 10px;
+  border-radius: 0 4px 4px 0;
   cursor: pointer;
 }
 
-/* Main Content Styles */
+/* Main content area */
 main {
   width: 100%;
 }
@@ -100,21 +109,24 @@ section {
   padding: 20px;
 }
 
+/* Heading styles */
 h1,
 h2,
 h3,
 h4 {
+  font-weight: 700;
   margin-bottom: 10px;
+  font-size: 1.5rem;
 }
 
+/* Paragraph styling */
 p {
   margin-bottom: 15px;
   font-size: 0.9rem;
   padding: 10px;
 }
 
-/* Banner Section */
-/* Banner section acting as a full-screen hero */
+/* Banner / hero section */
 .banner {
   position: relative;
   display: flex;
@@ -124,29 +136,29 @@ p {
   padding: 20px;
 }
 
-/* Position the image so it covers the entire section */
+/* Banner background image */
 .banner img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers without distortion */
-  z-index: -2; /* Places image behind everything */
+  object-fit: cover;
+  z-index: -2;
 }
 
-/* Transparent black overlay */
+/* Dark overlay for banner */
 .banner .overlay {
   position: absolute;
   top: 10;
   left: 0;
   width: 100%;
   height: 93%;
-  background-color: rgba(0, 0, 0, 0.6); /* 60% opacity black */
-  z-index: -1; /* Behind text but over image */
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
 }
 
-/* Styling for heading, paragraph, and button */
+/* Banner content (text and button) */
 .banner h1,
 .banner p,
 .banner a {
@@ -169,24 +181,38 @@ p {
   margin-right: auto;
 }
 
-/* Yellow button styling */
+/* Call-to-action button in banner */
 .banner a {
   display: inline-block;
-  background-color: #e09e00; /* Bright yellow */
-  color: #000; /* Black text */
+  background-color: #e09e00;
+  color: #000;
   padding: 15px 15px;
   font-weight: bold;
+  border-radius: 4px;
   text-decoration: none;
   font-size: 1rem;
   max-width: 200px;
   margin-right: auto;
 }
 
-/* Button hover effect */
+.banner a:hover {
+  display: inline-block;
+  color: #7f693f;
+  padding: 15px 15px;
+  font-weight: bold;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+  max-width: 200px;
+  margin-right: auto;
+}
+
+/* Button hover background */
 .banner a:hover {
   background-color: #e09e00;
 }
 
+/* About section */
 #about {
   display: flex;
   flex-direction: column;
@@ -200,11 +226,11 @@ p {
   margin-bottom: 15px;
 }
 
-/* Services Section */
-
+/* Services section */
 .service {
   background-color: #ffe6ac;
 }
+
 #services h2 {
   margin-bottom: 20px;
 }
@@ -229,13 +255,25 @@ p {
   display: inline-block;
   background-color: #222;
   color: #ffffff;
-  padding: 20px 35px;
-  font-size: 0.8rem;
-  font-weight: bold;
+  padding: 25px 30px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
   margin: 0px 0px 10px 10px;
 }
 
-/* Vision Section */
+.service a:hover {
+  display: inline-block;
+  background-color: #e09e00;
+  color: #222;
+  padding: 25px 30px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0px 0px 10px 10px;
+}
+
+/* Vision section with image and overlay text */
 .vision {
   position: relative;
   color: white;
@@ -249,7 +287,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers without distortion */
+  object-fit: cover;
   z-index: -2;
 }
 
@@ -269,32 +307,35 @@ p {
   top: 90px;
   font-size: 0.85rem;
 }
+
 .vision a {
   bottom: 30px;
-  background-color: #00000099;
+  background-color: rgba(34, 34, 34, 0.6);
   color: #ffffff;
-  padding: 15px 25px;
+  padding: 8px 15px;
+  border-radius: 4px;
   font-weight: bold;
   font-size: 0.9rem;
   width: fit-content;
   border: 1px solid #c78c06;
 }
 
-/* Team Section */
-.team {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  background-color: #ffe6ac;
-  padding: 20px;
+.vision a:hover {
+  bottom: 30px;
+  background-color: #00000099;
+  color: #c78c06;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  width: fit-content;
+  border: 1px solid #c78c06;
 }
 
+/* Team section */
 .team-member {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+
   background-color: #ffe6ac;
-  padding: 10px;
 }
 
 .team-member img {
@@ -306,7 +347,7 @@ p {
 
 .team-member h3 {
   font-size: 1.2rem;
-  margin: 0 10px;
+  margin: 10px;
 }
 
 .team-member h4 {
@@ -317,12 +358,7 @@ p {
   border-bottom: 2px solid #c78c06;
 }
 
-.team-member p {
-  margin: 10px;
-  font-size: 0.9rem;
-}
-
-/* Contact Section */
+/* Contact section */
 #contact {
   display: flex;
   flex-direction: column;
@@ -351,7 +387,8 @@ p {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px so
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
 #contact button {
@@ -359,11 +396,17 @@ p {
   color: #c78c06;
   border: none;
   padding: 10px 20px;
+  border-radius: 4px;
   cursor: pointer;
   font-size: 0.9rem;
 }
 
-/* Hours of Operation */
+#contact button:hover {
+  background-color: #c78c06;
+  color: #222;
+}
+
+/* Hours of operation section */
 .hours {
   margin-bottom: 30px;
 }
@@ -372,6 +415,7 @@ p {
   font-size: 1.2rem;
 }
 
+/* Table styling */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -383,7 +427,9 @@ table th {
   padding: 10px;
   text-align: center;
   font-size: 0.9rem;
+  background-color: #ffe6ac;
 }
+
 table td {
   border: 1px solid #ddd;
   padding: 10px;
@@ -392,11 +438,7 @@ table td {
   font-weight: 600;
 }
 
-table th {
-  background-color: #ffe6ac;
-}
-
-/* Map */
+/* Map section */
 .map {
   margin-bottom: 30px;
 }
@@ -407,7 +449,7 @@ table th {
   border: none;
 }
 
-/* Footer */
+/* Footer section */
 footer {
   background-color: #222;
   color: #c78c06;
@@ -420,14 +462,19 @@ footer p {
   margin-bottom: 5px;
 }
 
-/* Icons */
+.unsplash {
+  color: #ffe6ac;
+  text-decoration: underline;
+}
+
+/* Icon spacing */
 .fa-caret-right {
   margin-left: 5px;
 }
 
-/* Media Queries for larger screens */
-@media (min-width: 760px) {
-  /* Header */
+/* Responsive styles for wider screens */
+@media screen and (min-width: 760px) {
+  /* Flex layout for header */
   header {
     display: flex;
     justify-content: space-evenly;
@@ -439,65 +486,67 @@ footer p {
     background-color: transparent;
     padding: 10px 0;
   }
+
   nav {
     background-color: transparent;
     display: flex;
-    justify-content: center; /* centers everything inside the nav */
+    justify-content: center;
     align-items: center;
     padding: 10px;
   }
-  
+
   nav ul {
-    display: flex; /* makes the li’s go in a row */
+    display: flex;
     flex-direction: row;
     list-style: none;
     margin: 0;
     padding: 0;
     margin-right: 20px;
   }
-  
+
   nav ul li {
     margin: 0 10px;
   }
-  
+
   nav ul li a {
     color: #fff;
     text-decoration: none;
     padding: 10px;
     display: block;
   }
-  
+
   nav ul li a:hover {
     color: #222;
     background-color: #c78c06;
     padding: 10px;
   }
-  
+
   nav form {
     display: flex;
     align-items: center;
   }
-  
+
   nav form label {
     display: none;
   }
-  
+
   nav form input {
     padding: 5px 10px;
+    border-radius: 4px 0 0 4px;
     border: none;
-    width: 250px; /* make the input longer here */
+    width: 250px;
   }
-  
+
   nav form button {
     background-color: #222;
     border: 1px solid #c78c06;
     padding: 5px 15px;
+    border-radius: 0 4px 4px 0;
     cursor: pointer;
     color: #c78c06;
   }
-  
 
-  /* Two-column layouts */
+  /* Banner overlay padding */
   .banner .overlay {
     position: absolute;
     top: 10;
@@ -505,11 +554,13 @@ footer p {
     right: 20px;
     width: 97%;
     height: 93%;
-    background-color: rgba(0, 0, 0, 0.6); /* 60% opacity black */
-    z-index: -1; /* Behind text but over image */
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
     padding-right: 80px;
     padding-left: 80px;
   }
+
+  /* About section side-by-side layout */
   #about {
     flex-direction: row;
     align-items: center;
@@ -521,273 +572,89 @@ footer p {
     margin-bottom: 0;
   }
 
+  /* Services grid layout */
   #services {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
+    width: 75%;
+    margin: auto;
   }
+
   .digital {
     grid-column: 1/4;
   }
+
   .marketing {
     grid-column: 4/7;
   }
+
   .video {
     grid-column: 1/3;
   }
+
   .web {
     grid-column: 3/5;
   }
+
   .print {
     grid-column: 5/7;
   }
 
   #services h2 {
     grid-column: 1 / -1;
+  }
+
+  .team-section {
+    max-width: 80%;
+    margin: auto;
   }
 
   .team-member {
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+  }
+
+  .team-member:nth-child(2) img {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .team-member:nth-child(2) .team-info {
+    grid-column: 1;
+    grid-row: 1;
   }
 
   .team-member img {
-    width: 40%;
-    margin-right: 20px;
-    margin-bottom: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 
+  /* Contact section two-column layout */
   #contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    max-width: 1100px;
+    gap: 50px;
+    width: 80%;
     margin: auto;
   }
+
   .contact {
     grid-column: 1/2;
   }
+
   .map {
     grid-column: 2/3;
     grid-row: 2/3;
     max-height: 100px;
   }
+
   .hours {
     grid-column: 1/3;
   }
-  
+
   #contact h2 {
     grid-column: 1 / -1;
   }
 }
-
-@media (min-width: 760px) {
-  /* Header */
-  header {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0 20px;
-    max-width: 100%;
-  }
-
-  .logo {
-    background-color: transparent;
-    padding: 10px 0;
-  }
-
-  nav {
-    background-color: transparent;
-    display: flex;
-    align-items: right;
-    max-width: 100%;
-  }
-
-  nav ul {
-    flex-direction: row;
-    margin-right: 20px;
-  }
-
-  nav ul li {
-    margin: 0 10px;
-  }
-
-  nav form {
-    display: flex;
-    align-items: center;
-    max-width: 100%;
-  }
-
-  nav form label {
-    display: none;
-  }
-
-  nav form input {
-    padding: 5px;
-    border: none;
-  }
-
-  nav form button {
-    background-color: #222;
-    border: 1px solid #c78c06;
-    padding: 5px 10px;
-    cursor: pointer;
-    max-width: 900px;
-  }
-  .banner {
-    padding-right: 80px;
-    padding-left: 80px;
-  }
-  .banner .overlay {
-    position: absolute;
-    top: 10;
-    left: 20px;
-    right: 20px;
-    width: 97%;
-    height: 90%;
-    background-color: rgba(0, 0, 0, 0.6); /* 60% opacity black */
-    z-index: -1; /* Behind text but over image */
-    padding-right: 80px;
-    padding-left: 80px;
-  }
-  /* Two-column layouts */
-  #about {
-    flex-direction: row;
-    align-items: center;
-    padding-right: 80px;
-    padding-left: 80px;
-  }
-
-  #about img {
-    width: 50%;
-    margin-right: 20px;
-    margin-bottom: 0;
-  }
-
-  #services {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 20px;
-    max-width: 1000px;
-    margin: auto;
-  }
-  .digital {
-    grid-column: 1/4;
-  }
-  .marketing {
-    grid-column: 4/7;
-  }
-  .video {
-    grid-column: 1/3;
-  }
-  .web {
-    grid-column: 3/5;
-  }
-  .print {
-    grid-column: 5/7;
-  }
-
-  #services h2 {
-    grid-column: 1 / -1;
-  }
-
-  #team {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .team-member img {
-    width: 40%;
-    margin-right: 20px;
-    margin-bottom: 0;
-  }
-
-  #contact {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    max-width: 1100px;
-    margin: auto;
-  }
-  .contact {
-    grid-column: 1/2;
-  }
-  .map {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    max-height: 100px;
-  }
-  .hours {
-    grid-column: 1/3;
-  }
-  
-  #contact h2 {
-    grid-column: 1 / -1;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
